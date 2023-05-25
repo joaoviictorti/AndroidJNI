@@ -1,0 +1,49 @@
+# Arquivos de compilação e objetos
+*.o
+*.obj
+*.exe
+*.out
+
+# Arquivos gerados pelo CMake
+/CMakeFiles/
+/CMakeCache.txt
+/CMakeScripts/
+/CMakeSettings.json
+/CMakePredefinedTargets.cmake
+/*.cmake
+/*.cmake.in
+
+# Arquivos gerados pelo Visual Studio
+/*.sln
+/*.vcxproj
+/*.vcxproj.filters
+/*.vcxproj.user
+
+# Arquivos gerados pelo Xcode
+/*.xcodeproj/
+/*.xcworkspace/
+
+# Arquivos gerados pelo Make
+/Makefile
+/makefile
+/makefile.*
+
+# Arquivos de configuração do IDE
+/.vscode/
+/.idea/
+
+# Arquivos gerados por ferramentas de análise estática
+/*.gcda
+/*.gcno
+/*.gcov
+
+# Arquivos de dependências gerados
+/build/
+/lib/
+/vendor/
+
+# Outros arquivos e diretórios gerados
+/Debug/
+/Release/
+/doc/
+/bin/
