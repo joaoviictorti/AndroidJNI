@@ -5,8 +5,7 @@
 
 <h4 align="center">Biblioteca nativa android (C++) que verificar diretórios comuns que tem binários root</h4>
 <p align="center">
-  <a href="#características">Features</a> •
-  <a href="#instalação">Install</a>
+  <a href="#características">Features</a>
 </p>
 
 ---
@@ -18,6 +17,35 @@ A biblioteca que construir é vulnerável ataques de hooking no JNI (Java Native
 
  - A biblioteca verificar diretórios comuns que pode ter binários root
 
+# Utilizando a mesma
 
+```kotlin
+package br.viictorjj.androidjni
+
+import android.os.Bundle
+import android.util.Log
+import android.widget.TextView
+
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        System.loadLibrary("androidjni")
+        if(checkFileExists()){
+            Log.e("ROOT","DETECTADO")
+        }else{
+            Log.e("ROOT","NÃO DETECTADO")
+        }
+
+    }
+
+    private external fun checkFileExists(): Boolean
+
+}
+
+```
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=0000FF&height=120&section=footer"/>
