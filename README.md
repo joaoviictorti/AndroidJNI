@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         System.loadLibrary("androidjni")
+        
         if(checkFileExists()){
             Log.e("ROOT","DETECTADO")
         }else{
